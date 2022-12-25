@@ -46,7 +46,7 @@ namespace Shoe_Diva
                 }
                 else
                 {
-                    sql = "UPDATE Shoes set inventory="+num+" WHERE SId=" + flag;
+                    sql = "UPDATE Shoes set inventory=" + num + " WHERE SId=" + flag;
                     DBHelper.execute(sql);
                 }
                 MessageBox.Show("订单提交成功！");

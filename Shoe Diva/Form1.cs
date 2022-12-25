@@ -89,7 +89,7 @@ namespace Shoe_Diva
         }
         private void refreshInfo()
         {
-            if (flag != 0 && available[flag-1])
+            if (flag != 0 && available[flag - 1])
             {
                 DataTable shoe = DBHelper.GetDataSet("select * from Shoes where SId=" + flag).Tables[0];
                 label2.Text = shoe.Rows[0]["model"].ToString();
@@ -113,7 +113,7 @@ namespace Shoe_Diva
             Button[] buttons = new Button[] { button1, button2, button3, button4 };
             for (int i = 0; i < 4; i++)
             {
-                DataSet ds = DBHelper.GetDataSet("select * from Shoes where SId="+(i+1));
+                DataSet ds = DBHelper.GetDataSet("select * from Shoes where SId=" + (i + 1));
                 if (ds.Tables[0].Rows.Count == 0)
                 {
                     pics[i].Image = Properties.Resources.sold_out;
